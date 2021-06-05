@@ -1,0 +1,51 @@
+#background {
+    background-image: url(./img/Fondo/fondo.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#nav-bar {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 70px;
+    height: 870px;
+    background-color: black;
+    opacity: 80%;
+}
+
+#desplegable {
+    position: fixed;
+    color: white;
+    font-size: 2.5rem;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#instagram {
+    position: fixed;
+    color: white;
+    font-size: 2rem;
+    top: 300px;
+    right: 18px;
+}
+
+#github {
+    position: fixed;
+    color: white;
+    font-size: 2rem;
+    top: 400px;
+    right: 18px;
+    cursor: pointer;
+}
+
+#twitter {
+    position: fixed;
+    color: white;
+    font-size: 2rem;
+    top: 500px;
+    right: 18px;
+    cursor: pointer;
+}

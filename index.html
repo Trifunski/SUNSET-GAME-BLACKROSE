@@ -1,20 +1,99 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <title>GamesPlatform</title>
-</head>
-<body id="background">
-    <div id="nav-bar">
-        <i class="bi bi-filter-right" id="desplegable"></i>
-        <a href="https://www.instagram.com/trifunski/?hl=es"><i class="bi bi-instagram" id="instagram"></i></a>
-        <a href=""><i class="bi bi-github" id="github"></i></a>
-        <a href="https://twitter.com/Trifunski1"><i class="bi bi-twitter" id="twitter"></i></a>
-    </div>
-</body>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="index.css">
+        <title>GamesPlatform</title>
+
+    </head>
+
+    <body id="background">
+
+        <!-- Start Menu -->
+
+        <div id="menu">
+            <div id="nav-bar">
+            
+                <a href="https://discord.gg/Fhayacn"><i class="bi bi-discord" id="discord"></i></a>
+                <a href="https://github.com/Trifunski"><i class="bi bi-github" id="github"></i></a>
+                <a href="https://twitter.com/Trifunski1"><i class="bi bi-twitter" id="twitter"></i></a>
+            </div>
+    
+            <div id="title">
+                SUNSET <br> GAME
+            </div>
+    
+            <button class="btn" id="btn-play" onclick="btnPlay()">PLAY</button>
+        </div>
+
+        <!-- Game Category Selection Menu -->
+
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Position of the pieces -->
+
+        <div id="juego">
+            <div class="contenedor" id="contenedor">
+                <img onclick="piezas(1)" class="pieza1" src="./img/Imagenes Puzzle/imagen0/trozo1.jpg"  style="top: 60px; left: 104px;" id="bloque-1">
+                <img onclick="piezas(2)" class="pieza2" src="./img/Imagenes Puzzle/imagen0/trozo2.jpg"  style="top: 60px; left: 305px;" id="bloque-2">
+                <img onclick="piezas(3)" class="pieza3" src="./img/Imagenes Puzzle/imagen0/trozo3.jpg"  style="top: 60px; left: 506px;" id="bloque-3">
+                <img onclick="piezas(4)" class="pieza4" src="./img/Imagenes Puzzle/imagen0/trozo4.jpg"  style="top: 60px; left: 707px;" id="bloque-4">
+                <img onclick="piezas(5)" class="pieza5" src="./img/Imagenes Puzzle/imagen0/trozo5.jpg"  style="top: 261px; left: 104px;" id="bloque-5">
+                <img onclick="piezas(6)" class="pieza6" src="./img/Imagenes Puzzle/imagen0/trozo6.jpg"  style="top: 261px; left: 305px;" id="bloque-6">
+                <img onclick="piezas(7)" class="pieza7" src="./img/Imagenes Puzzle/imagen0/trozo7.jpg"  style="top: 261px; left: 506px;" id="bloque-7">
+                <img onclick="piezas(8)" class="pieza8" src="./img/Imagenes Puzzle/imagen0/trozo8.jpg"  style="top: 261px; left: 707px;" id="bloque-8">
+                <img onclick="piezas(9)" class="pieza9" src="./img/Imagenes Puzzle/imagen0/trozo9.jpg"  style="top: 462px; left: 104px;" id="bloque-9">
+                <img onclick="piezas(10)" class="pieza10" src="./img/Imagenes Puzzle/imagen0/trozo10.jpg" style="top: 462px; left: 305px;" id="bloque-10">
+                <img onclick="piezas(11)" class="pieza11" src="./img/Imagenes Puzzle/imagen0/trozo11.jpg" style="top: 462px; left: 506px;" id="bloque-11">
+                <div onclick="piezas(12)" class="pieza12" id="bloque-12"></div>
+    
+                <div class="button-row">
+                    <div><a title="START" onclick="aleatorio()" id="aleatorio"></a></div>
+                    <div><a title="BACKWARD" onclick="retroceder()" id="retroceder"></a></div>
+                    <div><a title="FORWARD" onclick="avanzar()" id="avanzar"></a></div>
+                </div>
+                
+            </div>
+    
+            <!-- TIME OF THE PUZZLE -->
+    
+            <div id="tiempo">
+                <span id="contenedor-tiempo"></span>s
+            </div> 
+    
+            <!-- TIME WHEN YOU FINISH THE GAME -->
+    
+            <div id="container-win">
+                <h1 id="text-win">
+                    COMPLETADO
+                </h1>
+        
+                <h2 id="completed">
+                    Tiempo: 
+                </h2>
+    
+                <div id="button-finished">
+                    <div><a title="REPETIR" onclick="avanzar()"></a></div>
+                </div>
+            </div>
+    
+            <div>
+                <i class="bi bi-caret-left-fill" id="btn-volver" onclick="btnVolver()"></i>
+            </div>
+        </div>
+
+    </body>
+
 </html>

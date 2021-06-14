@@ -1,4 +1,4 @@
-// MENU DE INICIO
+// MENU DE INICIO 
 
 function btnPlay() {
     document.getElementById("menu").style.display = "none";
@@ -301,7 +301,7 @@ function avanzar() {
 
     a++;
 
-    if (a == 9){
+    if (a == 7){
         a = 0;
     }
 
@@ -354,7 +354,7 @@ function retroceder() {
     a--;
 
     if (a == -1){
-        a = 8;
+        a = 6;
     }
 
     $("#bloque-1").attr("src","./img/Imagenes Puzzle/imagen" + a + "/trozo1.jpg");
